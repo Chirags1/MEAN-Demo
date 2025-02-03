@@ -5,7 +5,7 @@ const Post = require("./models/post");
 const app = express();
 mongoose
   .connect(
-    "mongodb+srv://chiragsoni2412:y2iI9KfHNY9AA8uY@cluster0.nxoo8.mongodb.net/"
+    "mongodb+srv://.mongodb.net/"
   )
   .then(() => {
     console.log("connected to database");
