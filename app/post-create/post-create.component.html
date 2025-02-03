@@ -1,0 +1,30 @@
+<div class="container center">
+  <mat-card style="padding: 2em">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        placeholder="Post title *"
+        [(ngModel)]="title"
+        [ngModel]="post.title"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+        matInput
+        type="text"
+        [(ngModel)]="content"
+        [ngModel]="post.content"
+        placeholder="Post Content *"
+      ></textarea>
+    </mat-form-field>
+  </mat-card>
+  <button
+    mat-flat-button
+    type="submit"
+    (click)="onSubmit()"
+    style="margin: 1em"
+  >
+    Add Post
+  </button>
+</div>

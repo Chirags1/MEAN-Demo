@@ -1,0 +1,33 @@
+<mat-accordion multi="true" *ngIf="backendPost.length > 0">
+  <mat-expansion-panel *ngFor="let post of backendPost">
+    <mat-expansion-panel-header>
+      <mat-panel-title> {{ post.title }} </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>{{ post.content }}</p>
+    <mat-action-row>
+      <button mat-button color="primary" [routerLink]="['/edit', 'post.id']">
+        Edit
+      </button>
+      <button mat-button color="warn" (click)="onDelete(post._id)">
+        Delete
+      </button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<mat-accordion multi="true" *ngIf="postList.length > 0">
+  <mat-expansion-panel *ngFor="let post of postList">
+    <mat-expansion-panel-header>
+      <mat-panel-title> {{ post.title }} </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>{{ post.content }}</p>
+    <mat-action-row>
+      <button mat-button color="primary">Edit</button>
+      <button mat-button color="warn" (click)="onDelete(post._id)">
+        Delete
+      </button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<div *ngIf="postList.length === 0 && backendPost.length === 0">
+  No Post to show
+</div>

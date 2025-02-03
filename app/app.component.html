@@ -1,0 +1,13 @@
+<mat-toolbar style="background-color: rgb(185, 86, 218)">
+  <mat-toolbar-row>
+    <span routerLink="/create">Add Post</span>
+    <span style="flex: 1 1 auto"></span>
+    <span routerLink="/">List Post</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="container" style="width: 70%; display: block; margin: 2em">
+  <!-- <app-post-create (postData)="onPostAdded($event)"></app-post-create>
+  <app-post-list [postList]="postData"></app-post-list> -->
+  <router-outlet></router-outlet>
+</div>
